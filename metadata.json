@@ -1,0 +1,5 @@
+{
+  "name": "Kohinoor Restaurant - Ultra Luxury Dining",
+  "description": "Experience the royalty of North Indian cuisine at Kohinoor Restaurant, Gorakhpur. Premium fine dining with a futuristic touch.",
+  "requestFramePermissions": ["geolocation"]
+}
