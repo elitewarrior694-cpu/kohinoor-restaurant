@@ -1,17 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Phone, MapPin, ChevronDown } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Star, Phone, MapPin, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+    >
       {/* Background with Parallax effect */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center scale-110"
-          style={{ 
-            backgroundImage: 'url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop")',
-            filter: 'brightness(0.3)'
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop")',
+            filter: "brightness(0.3)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/60 via-transparent to-luxury-black" />
@@ -23,20 +27,20 @@ export default function Hero() {
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-gold-400/30 rounded-full"
-            initial={{ 
-              x: Math.random() * window.innerWidth, 
+            initial={{
+              x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
-              opacity: 0 
+              opacity: 0,
             }}
-            animate={{ 
+            animate={{
               y: [null, Math.random() * -100],
               opacity: [0, 0.5, 0],
-              scale: [1, 1.5, 1]
+              scale: [1, 1.5, 1],
             }}
-            transition={{ 
-              duration: 5 + Math.random() * 5, 
+            transition={{
+              duration: 5 + Math.random() * 5,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             }}
           />
         ))}
@@ -51,7 +55,11 @@ export default function Hero() {
         >
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={16} className="fill-gold-500 text-gold-500 animate-pulse" />
+              <Star
+                key={i}
+                size={16}
+                className="fill-gold-500 text-gold-500 animate-pulse"
+              />
             ))}
           </div>
           <span className="text-gold-200/80 text-sm tracking-[0.3em] uppercase font-medium">
@@ -93,7 +101,7 @@ export default function Hero() {
             <Phone size={20} />
             Call Now
           </motion.button>
-          
+
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
