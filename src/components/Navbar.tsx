@@ -109,7 +109,10 @@ export default function Navbar() {
                     if (el) {
                       el.scrollIntoView({ behavior: "smooth" });
                     }
-                    setIsMobileMenuOpen(false);
+
+                    setTimeout(() => {
+                      setIsMobileMenuOpen(false);
+                    }, 1000);
                   }}
                 >
                   {link.name}
